@@ -1,22 +1,37 @@
 [
   {
-    "id": 1,
-    "label": "News"
+    "model": "rareapi.tag",
+    "pk": 1,
+    "fields": {
+      "label": "News"
+    }
   },
   {
-    "id": 2,
-    "label": "Funny"
+    "model": "rareapi.tag",
+    "pk": 2,
+    "fields": {
+      "label": "Funny"
+    }
   },
   {
-    "id": 3,
-    "label": "Learning"
+    "model": "rareapi.tag",
+    "pk": 3,
+    "fields": {
+      "label": "Learning"
+    }
   },
   {
-    "id": 4,
-    "label": "Finance"
+    "model": "rareapi.tag",
+    "pk": 4,
+    "fields": {
+      "label": "Finance"
+    }
   },
   {
-    "id": 5,
-    "label": "Health"
+    "model": "rareapi.tag",
+    "pk": 5,
+    "fields": {
+      "label": "Health"
+    }
   }
 ]

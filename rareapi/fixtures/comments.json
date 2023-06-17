@@ -1,20 +1,32 @@
 [
   {
-    "id": 1,
-    "author_id": 1,
-    "post_id": 1,
-    "content": "This is a comment for a post."
+    "model": "rareapi.comment",
+    "pk": 1,
+    "fields": {
+      "author_id": 1,
+      "post_id": 1,
+      "content": "This is a comment for a post.",
+      "created_on": "2023-01-01"
+    }
   },
   {
-    "id": 2,
-    "author_id": 2,
-    "post_id": 2,
-    "content": "This is a comment for another post."
+    "model": "rareapi.comment",
+    "pk": 2,
+    "fields": {
+      "author_id": 2,
+      "post_id": 2,
+      "content": "This is a comment for another post.",
+      "created_on": "2023-01-01"
+    }
   },
   {
-    "id": 3,
-    "author_id": 3,
-    "post_id": 3,
-    "content": "This is a comment for yet another post."
+    "model": "rareapi.comment",
+    "pk": 3,
+    "fields": {
+      "author_id": 2,
+      "post_id": 2,
+      "content": "This is a comment for yet another post.",
+      "created_on": "2023-01-01"
+    }
   }
 ]

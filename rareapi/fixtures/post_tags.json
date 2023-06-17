@@ -1,14 +1,26 @@
 [
   {
-    "post_id": 1,
-    "tag_id": 2
+    "model": "rareapi.posttag",
+    "pk": 1,
+    "fields": {
+      "post_id": 1,
+      "tag_id": 2
+    }
   },
   {
-    "post_id": 2,
-    "tag_id": 3
+    "model": "rareapi.posttag",
+    "pk": 2,
+    "fields": {
+      "post_id": 2,
+      "tag_id": 3
+    }
   },
   {
-    "post_id": 2,
-    "tag_id": 5
+    "model": "rareapi.posttag",
+    "pk": 3,
+    "fields": {
+      "post_id": 2,
+      "tag_id": 5
+    }
   }
 ]
