@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "label": "News"
+  },
+  {
+    "id": 2,
+    "label": "Funny"
+  },
+  {
+    "id": 3,
+    "label": "Learning"
+  },
+  {
+    "id": 4,
+    "label": "Finance"
+  }
+]
