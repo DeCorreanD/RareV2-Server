@@ -5,12 +5,26 @@
         "fields": {
             "first_name": "Evan",
             "last_name": "Breland",
-            "bio": "Just a dude who plays cello and likes to code.",
+            "bio": "Wannabe professional cellist and a lazy coder.",
             "profile_image_url": "https://photos.google.com/photo/AF1QipPLwy1658P_40_9QotPljhk60ZTvsovS-xf_uYI",
             "email": "evan.breland@gmail.com",
             "created_on": "2023-06-05",
             "active": true,
             "uid": 1
+        }
+    },
+    {
+        "model": "rareapi.user",
+        "pk": 2,
+        "fields": {
+            "first_name": "Jake",
+            "last_name": "Hardin",
+            "bio": "0 Michelin Star earner. Gordon Ramsey is my bro.",
+            "profile_image_url": "https://avatars.githubusercontent.com/u/108779760?v=4",
+            "email": "jakehardin13@gmail.com",
+            "created_on": "2023-05-01",
+            "active": true,
+            "uid": 2
         }
     }
 ]
