@@ -1,0 +1,24 @@
+[
+    {
+        "model": "rareapi.post",
+        "pk": 1,
+        "fields": {
+            "rare_user_id": 1,
+            "title": "We love Shrek",
+            "image_url": "https://ih1.redbubble.net/image.808034761.4415/flat,750x,075,f-pad,750x1000,f8f8f8.u6.jpg",
+            "publication_date": "2023-05-09",
+            "content": "Love Makes Everything Better"
+        }
+    },
+    {
+        "model": "rareapi.post",
+        "pk": 2,
+        "fields": {
+            "rare_user_id": 1,
+            "title": "Marky Mark",
+            "image_url": "https://ucelisabethsummer.files.wordpress.com/2018/01/marky-mark.jpg?w=600",
+            "publication_date": "2023-02-23",
+            "content": "Marky Mark has defined the hottest new workout routine!"
+        }
+    }
+]
