@@ -1,1 +1,3 @@
-from .comment import Comments
+from .comment import Comment
+from .tag import Tag
+from .post_tag import PostTag
