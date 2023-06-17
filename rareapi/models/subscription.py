@@ -1,7 +1,8 @@
 from django.db import models
+from .user import User
 
 class Subscription(models.Model):
-    follower_id = models.CharField(max_length=50)
-    author_id = models.CharField(max_length=50)
-    created_on = models.CharField(max_length=50)
-    ended_on = models.CharField(max_length=50)
+    follower_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="follower_id")
+    author_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="author_id")
+    created_on = models.DateField()
+    ended_on = models.DateField()
