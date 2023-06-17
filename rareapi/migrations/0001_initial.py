@@ -12,6 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='Subscription',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('follower_id', models.CharField(max_length=50)),
+                ('author_id', models.CharField(max_length=50)),
+                ('created_on', models.CharField(max_length=50)),
+                ('ended_on', models.CharField(max_length=50)),
+
             name='Comments',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
