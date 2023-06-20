@@ -14,7 +14,7 @@
       "pk": 3,
       "fields": {
           "follower_id": 2,
-          "author_id": 1,
+          "author_id": 2,
           "created_on": "2005-01-14",
           "ended_on": "2099-01-14"
       }
