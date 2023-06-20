@@ -27,7 +27,8 @@ class PostView(ViewSet):
         title=request.data["title"],
         publication_date=request.data["publication_date"],
         image_url=request.data["image_url"],
-        content=request.data     ["content"],        rare_user_id=rare_user_id
+        content=request.data     ["content"],  
+        rare_user_id=rare_user_id
         )
         serializer = PostSerializer(post)
         return Response(serializer.data)
@@ -61,6 +62,3 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'rare_user_id', 'title', 'publication_id', 'image_url', 'content' )
     depth = 1
-           
-      
-         
