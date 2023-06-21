@@ -20,8 +20,7 @@ from django.conf.urls import include
 from rest_framework import routers
 from rareapi.views import register_user, check_user
 
-router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'posts', PostView, 'post')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
