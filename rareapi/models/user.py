@@ -8,4 +8,4 @@ class User(models.Model):
     email = models.EmailField()
     created_on = models.DateField()
     active = models.BooleanField(null=True, blank=True)
-    uid = models.CharField(max_length=10)
+    uid = models.CharField(max_length=100)

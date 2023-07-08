@@ -21,12 +21,12 @@ class PostView(ViewSet):
     
     def create(self, request):
 
-        rare_user_id = User.objects.get(uid=request.data["rare_user_id"])
+        rare_user_id = User.objects.get(uid=request.data["rareUserId"])
         
         post = Post.objects.create(
         title=request.data["title"],
-        publication_date=request.data["publication_date"],
-        image_url=request.data["image_url"],
+        publication_date=request.data["publicationDate"],
+        image_url=request.data["imageUrl"],
         content=request.data     ["content"],  
         rare_user_id=rare_user_id
         )
@@ -40,11 +40,11 @@ class PostView(ViewSet):
         """
         post = Post.objects.get(pk=pk)
         post.title = request.data["title"]
-        post.publication_date = request.data["publication_date"]
-        post.image_url = request.data["image_url"]
+        post.publication_date = request.data["publicationDate"]
+        post.image_url = request.data["imageUrl"]
         post.content = request.data["content"]
         
-        rare_user_id = User.objects.get(pk=request.data["rare_user_id"])
+        rare_user_id = User.objects.get(pk=request.data["rareUserId"])
         post.rare_user_id = rare_user_id
         post.save()
         
