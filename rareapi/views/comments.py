@@ -26,7 +26,8 @@ class CommentView(ViewSet):
         Returns:
             Response -- JSON serialized list of comments
         """
-        comment = Comment.objects.all()
+        post_id = request.query_params.get('postId', None)
+        comment = Comment.objects.all().filter(post_id=post_id)
 
         serializer = CommentSerializer(comment, many=True)
         return Response(serializer.data)
