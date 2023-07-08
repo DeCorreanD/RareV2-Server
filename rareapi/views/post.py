@@ -44,8 +44,8 @@ class PostView(ViewSet):
         post.image_url = request.data["imageUrl"]
         post.content = request.data["content"]
         
-        rare_user_id = User.objects.get(pk=request.data["rareUserId"])
-        post.rare_user_id = rare_user_id
+        # rare_user_id = User.objects.get(pk=request.data["rareUserId"])
+        # post.rare_user_id = rare_user_id
         post.save()
         
         return Response(None, status=status.HTTP_204_NO_CONTENT)
