@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rareapi.models import Post, User, Comment
+from datetime import datetime
 
 class CommentView(ViewSet):
     """Rare comments view"""
@@ -36,14 +37,14 @@ class CommentView(ViewSet):
         Returns
             Response -- JSON serialized comment instance
         """
-        post_id = Post.objects.get(pk=request.data["post_id"])
-        author_id = User.objects.get(pk=request.data["author_id"])
+        post_id = Post.objects.get(pk=request.data["postId"])
+        author_id = User.objects.get(pk=request.data["authorId"])
 
         comment = Comment.objects.create(
             author_id=author_id,
             post_id=post_id,
             content=request.data["content"],
-            created_on=request.data["created_on"],
+            created_on=datetime.now(),
         )
 
         serializer = CommentSerializer(comment)
@@ -57,13 +58,13 @@ class CommentView(ViewSet):
 
         comment = Comment.objects.get(pk=pk)
         comment.content = request.data["content"]
-        comment.created_on = request.data["created_on"]
+        # comment.created_on = request.data["created_on"]
 
-        author_id = User.objects.get(pk=request.data["author_id"])
-        comment.author_id = author_id
+        # author_id = User.objects.get(pk=request.data["authorId"])
+        # comment.author_id = author_id
 
-        post_id = Post.objects.get(pk=request.data["post_id"])
-        comment.post_id = post_id
+        # post_id = Post.objects.get(pk=request.data["postId"])
+        # comment.post_id = post_id
 
         comment.save()
 
@@ -79,7 +80,8 @@ class CommentView(ViewSet):
 class  CommentSerializer(serializers.ModelSerializer):
     """JSON serializer for comments
     """
+    created_on = serializers.DateTimeField(format="%B %d, %Y, %I:%M%p")
     class Meta:
         model = Comment
-        fields = ('id', 'author_id', 'post_id', 'content', 'created_on')
+        fields = ('id', 'author_id', 'post_id', 'content', 'created_on', 'commenter_name')
         depth = 1
